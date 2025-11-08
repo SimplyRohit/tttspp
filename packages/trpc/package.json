@@ -1,5 +1,5 @@
 {
-  "name": "trpc",
+  "name": "@repo/trpc",
   "module": "index.ts",
   "type": "module",
   "private": true,
