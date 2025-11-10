@@ -1,9 +1,9 @@
 import { createBunServeHandler } from "trpc-bun-adapter";
-import { appRouter } from "@repo/trpc";
+import { trpcRouter } from "@repo/trpc/server";
 
 Bun.serve(
   createBunServeHandler({
-    router: appRouter,
+    router: trpcRouter,
     endpoint: "/trpc",
     responseMeta() {
       return {

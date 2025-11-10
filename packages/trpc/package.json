@@ -2,6 +2,20 @@
   "name": "@repo/trpc",
   "module": "index.ts",
   "type": "module",
+  "exports": {
+    "./client": {
+      "import": "./client.ts",
+      "require": "./client.ts"
+    },
+    "./server": {
+      "import": "./router.ts",
+      "require": "./router.ts"
+    },
+    ".": {
+      "import": "./index.ts",
+      "require": "./index.ts"
+    }
+  },
   "private": true,
   "devDependencies": {
     "@types/bun": "latest"
@@ -11,6 +25,8 @@
   },
   "dependencies": {
     "@trpc/client": "^11.7.1",
-    "@trpc/server": "^11.7.1"
+    "@trpc/server": "^11.7.1",
+    "superjson": "^2.2.5",
+    "zod": "^4.1.12"
   }
 }
